@@ -1,4 +1,5 @@
-*{
+/* styles.css */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +7,7 @@
   
   body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background-color: #F5F5F5; /* Cor neutra para o fundo */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,13 +15,19 @@
   }
   
   .login-container {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
     text-align: center;
+  }
+  
+  .logo {
+    width: 100%;
+    max-width: 300px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-bottom: 20px;
   }
   
   .login-container h2 {
@@ -33,7 +40,7 @@
     width: 100%;
     padding: 12px;
     margin: 15px 0;
-    border: 2px solid #ddd;
+    border: 2px solid #D4AF37; /* Cor da logo (marrom/amarelo) */
     border-radius: 8px;
     font-size: 16px;
     transition: all 0.3s ease;
@@ -48,7 +55,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: rgba(110, 142, 251, 0.2);
+    background: rgba(212, 175, 55, 0.2); /* Sombra suave com a cor da logo */
     transition: left 0.5s ease;
     z-index: -1;
   }
@@ -59,31 +66,31 @@
   }
   
   .input-field:focus {
-    border-color: #6e8efb;
+    border-color: #D4AF37;
     outline: none;
   }
   
   .login-button {
     width: 100%;
     padding: 12px;
-    background-color: #6e8efb;
+    background-color: #D4AF37; /* Cor da logo (marrom/amarelo) */
     border: none;
     border-radius: 8px;
     font-size: 18px;
-    color: #fff;
+    color: #FFFFFF;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   .login-button:hover {
-    background-color: #5a7de2;
+    background-color: #B38F2C; /* Gradiente mais escuro da cor da logo */
   }
   
   .forgot-password {
     margin-top: 15px;
     display: block;
     font-size: 14px;
-    color: #6e8efb;
+    color: #D4AF37; /* Cor da logo */
     text-decoration: none;
   }
   
@@ -98,7 +105,7 @@
   }
   
   .signup-link a {
-    color: #6e8efb;
+    color: #D4AF37; /* Cor da logo */
     text-decoration: none;
   }
   
