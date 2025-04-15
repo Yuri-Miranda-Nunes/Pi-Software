@@ -1,42 +1,23 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Css/Cadastro.css">
-    <title>Cadastro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Cadastro</title>
+  <link rel="stylesheet" href="/Css/Cadastro.css">
 </head>
 <body>
-    <div class="box">
-        <form action="">
-            <fieldset class="borda">
-                <legend class="meio"><b>CADASTRO</b></legend>
-                <br>
-                <div class="inputBox">
-                    <input type="text" name="nickname" id="nickname" class="inputUser" required>
-                    <label for="nickname" class="labelInput">Nickname</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="email" id="email" class="inputUser" required>
-                    <label for="email" class="labelInput">Email</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="password" name="senha" id="senha" class="inputUser" required>
-                    <label for="senha" class="labelInput">Senha</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                  <input type="password" name="confirm_senha" id="confirm_senha" class="inputUser" required>
-                  <label for="confirm_senha" class="labelInput">Confirme a Senha</label>
-              </div>
-              <br>
-
-              <br><br>
-              <button type="submit" name="submit" id="submit" class="Enviar">Cadastar</button> 
-            </fieldset>
-        </form>
-    </div>
+  <div class="signup-container">
+    <h2>Cadastro</h2>
+    <form action="#" method="POST">
+      <input type="text" class="input-field" placeholder="Nome completo" required>
+      <input type="email" class="input-field" placeholder="E-mail" required>
+      <input type="password" class="input-field" placeholder="Senha" required>
+      <input type="password" class="input-field" placeholder="Confirmar senha" required>
+      <button type="submit" class="signup-button">Cadastrar</button>
+    </form>
+    <p class="login-link">Já tem uma conta? <a href="http://127.0.0.1:5500/Html/Login.html">Faça login aqui</a></p>
+  </div>
 </body>
 </html>
