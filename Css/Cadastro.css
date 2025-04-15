@@ -1,0 +1,168 @@
+body {
+    background-color: black;
+}
+  .register-link {
+    font-family: MedievalSharp;
+  }
+  .register-link:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+  }
+  .forgot-password {
+    font-family: MedievalSharp;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .forgot-password:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+  }
+  .box{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 15px;
+    width: 25%;
+  }
+  .fieldset{
+    border: 3px solid dodgerblue;
+  }
+  .meio {
+    border: 1px solid #08090A;
+    padding: 10px;
+    text-align: center;
+    background-color: #80A4ED;
+    border-radius: 8px;
+  }
+  .inputBox{
+    position: relative;
+  }
+  .inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    color: #ffffff;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 1px;
+    font-family: MedievalSharp;
+    background-color: none;
+  }
+  .labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+  }
+  .inputUser:focus ~ .labelInput,
+  .inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: dodgerblue;
+  }
+  #data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    background-color: lightgoldenrodyellow;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: border-color 0.3s;
+    transition: box-shadow 0.3s;
+  
+    &:focus {
+      background-color: lightblue;
+      border-color: lightblue;
+      box-shadow: 0 0 5px lightblue;
+    }
+    &:hover {
+      background-color: lightblue;
+    }
+  }
+  #submit{
+    background-color: white;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: lightgoldenrodyellow;
+  }
+  #submit:hover{
+    background-image: linear-gradient(to right,lightgoldenrodyellow, rgb(234, 255, 0));
+  }
+  .medievalsharp-regular {
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .titulo {
+    text-align: center;
+  }
+  .register-link {
+    color: lightgoldenrodyellow;
+    font-size: 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-family: MedievalSharp;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    cursor: pointer; 
+    &:hover {
+      color: white;
+    }
+    &:active {
+      color: lightgray;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .forgot-password {
+    color: lightgoldenrodyellow;
+    font-size: 15px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-family: MedievalSharp;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    cursor: pointer; 
+    &:hover {
+      color: white;
+    }
+    &:active {
+      color: lightgray;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .borda {
+    border: 1px solid lightgoldenrodyellow;
+    padding: 10px;
+    background-color: #80A4ED;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .Enviar {
+    background-color: lightgoldenrodyellow;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: lightgoldenrodyellow;
+  }
+ 
