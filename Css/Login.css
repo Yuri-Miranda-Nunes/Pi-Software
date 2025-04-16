@@ -122,7 +122,7 @@
     color: #333333;
     text-align: center;
     background-color: #D4AF37;
-    padding: 20px;
+    padding: 10px;
     border-radius: 0; /* Remove bordas arredondadas para ocupar toda a largura */
     width: 100%; /* Garante que ocupe toda a largura */
 }
