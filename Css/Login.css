@@ -27,7 +27,7 @@
   .logo {
     width: 100%;
     max-width: 300px; /* Ajuste o tamanho da logo conforme necessário */
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduzindo o espaçamento entre a logo e o título "Login" */
   }
   
   .login-container h2 {
@@ -112,3 +112,17 @@
   .signup-link a:hover {
     text-decoration: underline;
   }
+  .footer-container {
+    position: fixed; /* Fixa o footer na parte inferior da tela */
+    bottom: 0; /* Garante que ele fique no final da tela */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    margin: 0; /* Remove margens externas */
+    font-size: 14px;
+    color: #333333;
+    text-align: center;
+    background-color: #D4AF37;
+    padding: 20px;
+    border-radius: 0; /* Remove bordas arredondadas para ocupar toda a largura */
+    width: 100%; /* Garante que ocupe toda a largura */
+}
