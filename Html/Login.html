@@ -1,31 +1,42 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tela de Login</title>
+  <title>Login</title>
+
   <link rel="stylesheet" href="/Css/Login.css">
 </head>
 
 <body>
-  <div class="login-container">
-    <img src="/img/LogoAltEuroquadros.jpeg" alt="Logo Euroquadros" class="logo">
-    <h2>Login</h2>
-    <form action="#" method="POST">
-      <input type="email" class="input-field" placeholder="E-mail" required>
-      <input type="password" class="input-field" placeholder="Senha" required>
-      <button type="submit" class="login-button">Entrar</button>
-    </form>
-    <a href="#" class="forgot-password">Esqueceu sua senha?</a>
-    <p class="signup-link">Não tem uma conta? <a href="http://127.0.0.1:5500/Html/Cadastro.html">Cadastre-se aqui</a></p>
+  <canvas id="particles"></canvas>
+
+  <div class="ring">
+    <i style="--clr:#D4AF37;"></i>
+    <i style="--clr:#D4AF37;"></i>
+    <i style="--clr:#D4AF37;"></i>
+    <div class="login">
+      <h2>Login</h2>
+      <div class="inputBx">
+        <input type="text" placeholder="E-mail">
+      </div>
+      <div class="inputBx">
+        <input type="password" placeholder="Senha">
+      </div>
+      <div class="inputBx">
+        <input type="submit" value="Entrar">
+      </div>
+      <div class="links">
+        <a href="#">Esqueci minha senha</a>
+        <a href="#">Signup</a>
+      </div>
+    </div>
   </div>
+  <script src="/js/particles.js"></script>
+
+
+
 </body>
-<footer>
-  <div class="footer-container">
-    <p>&copy; 2023 Euroquadros. Todos os direitos reservados.</p>
-  </div>
-</footer>
 
 </html>
