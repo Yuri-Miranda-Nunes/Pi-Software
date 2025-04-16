@@ -93,7 +93,15 @@ body {
   background: linear-gradient(45deg, #ff357a, #fff172);
   border: none;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.login .inputBx input[type="submit"]:hover {
+  transform: scale(1.1); /* Aumenta o tamanho do botão */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+  background: linear-gradient(45deg, #fff172, #ff357a); /* Inverte as cores do gradiente */
+}
+
 .login .inputBx input::placeholder {
   color: rgba(0, 0, 0, 0.75);
 }
