@@ -211,7 +211,6 @@ canvas {
   position: relative;
   z-index: 0;
   border-radius: 10px;
-  
 }
 .glow-on-hover:hover {
   transform: scale(1.1);
