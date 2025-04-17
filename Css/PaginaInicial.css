@@ -30,6 +30,7 @@
     font-weight: bold;
     font-size: 18px;
     text-align: right;
+    border-bottom: black 3px solid;
   }
   
   /* Info do usuário */
@@ -125,7 +126,7 @@
   }
 
   ./* Reset básico */
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -242,6 +243,7 @@ h1 {
   font-size: 18px;
   text-transform: uppercase;
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+  border-top: black 3px solid;
 }
 .logo-container {
     display: flex;
