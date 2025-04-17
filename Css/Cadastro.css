@@ -1,95 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ffffff;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ring {
+  position: relative;
+  width: 500px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.signup-container {
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-}
-
-.signup-container h2 {
-  font-size: 28px;
-  color: #333333;
-  margin-bottom: 20px;
-}
-
-.input-field {
-  width: 100%;
-  padding: 12px;
-  margin: 15px 0;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.input-field::before {
-  content: '';
+.ring i {
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
+  inset: 0;
+  border: 2px solid #fff;
+  transition: 0.5s;
+}
+
+.ring i:nth-child(1) {
+  border-radius: 70px;
+}
+
+.ring i:nth-child(2) {
+  border-radius: 70px;
+}
+
+.ring i:nth-child(3) {
+  border-radius: 70px;
+}
+
+.ring:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Adicionando animação de borda RGB no botão */
+@keyframes rgb-border {
+  0% {
+    border-color: rgb(255, 0, 0);
+    /* Vermelho */
+  }
+
+  33% {
+    border-color: rgb(0, 255, 0);
+    /* Verde */
+  }
+
+  66% {
+    border-color: rgb(0, 0, 255);
+    /* Azul */
+  }
+
+  100% {
+    border-color: rgb(255, 0, 0);
+    /* Volta ao vermelho */
+  }
+}
+
+/* Animação de borda girando com gradiente */
+@keyframes border-rotate {
+  0% {
+    border-image-source: linear-gradient(0deg, #ff357a, #fff172);
+  }
+
+  25% {
+    border-image-source: linear-gradient(90deg, #ff357a, #fff172);
+  }
+
+  50% {
+    border-image-source: linear-gradient(180deg, #ff357a, #fff172);
+  }
+
+  75% {
+    border-image-source: linear-gradient(270deg, #ff357a, #fff172);
+  }
+
+  100% {
+    border-image-source: linear-gradient(360deg, #ff357a, #fff172);
+  }
+}
+
+.login {
+  position: absolute;
+  width: 300px;
   height: 100%;
-  background: rgba(110, 142, 251, 0.2);
-  transition: left 0.5s ease;
-  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.input-field:focus::before,
-.input-field:hover::before {
-  left: 0;
+.login h2 {
+  font-size: 2em;
+  color: #000000;
 }
 
-.input-field:focus {
-  border-color: #6e8efb;
+.login .inputBx {
+  position: relative;
+  width: 100%;
+}
+
+.login .inputBx input {
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #000000;
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: #000000;
+  box-shadow: none;
   outline: none;
 }
 
-.signup-button {
+.login .inputBx input[type="submit"] {
   width: 100%;
-  padding: 12px;
-  background-color: #6e8efb;
+  background: #0078ff;
+  background: linear-gradient(45deg, #ff357a, #fff172);
   border: none;
-  border-radius: 8px;
-  font-size: 18px;
-  color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.signup-button:hover {
-  background-color: #5a7de2;
+.login .inputBx input[type="submit"]:hover {
+  transform: scale(1.1);
+  /* Aumenta o tamanho do botão */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Adiciona sombra */
+  background: linear-gradient(45deg, #fff172, #ff357a);
+  /* Inverte as cores do gradiente */
+  border: 4px solid transparent;
+  /* Reduz a espessura da borda */
+  border-image-slice: 1;
+  /* Permite que o gradiente seja aplicado à borda */
+  animation: gradient-rotate 2s linear infinite;
+  /* Aplica a animação de rotação do gradiente */
+  border-radius: 40px;
+  /* Aumenta o arredondamento da borda */
 }
 
-.login-link {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #333333;
+.login .inputBx input::placeholder {
+  color: rgba(0, 0, 0, 0.75);
 }
 
-.login-link a {
-  color: #6e8efb;
+.login .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.login .links a {
+  color: #000000;
   text-decoration: none;
 }
 
-.login-link a:hover {
-  text-decoration: underline;
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  
+}
+.glow-on-hover:hover {
+  transform: scale(1.1);
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #fff172, #ff357a, #fff172, #ff357a, #fff172, #ff357a, #fff172, #ff357a, #fff172 );
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
 }

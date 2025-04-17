@@ -5,16 +5,6 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const particlesArray = [];
-const mouse = {
-  x: null,
-  y: null,
-  radius: 100
-};
-
-window.addEventListener('mousemove', function (event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
-});
 
 window.addEventListener('resize', () => {
   canvas.width = window.innerWidth;
@@ -34,17 +24,9 @@ class Particle {
     this.x += this.speedX;
     this.y += this.speedY;
 
-    // Interação com o mouse
-    const dx = mouse.x - this.x;
-    const dy = mouse.y - this.y;
-    const distance = Math.sqrt(dx * dx + dy * dy);
-
-    if (distance < mouse.radius) {
-      if (this.x < mouse.x) this.x -= 1;
-      else this.x += 1;
-      if (this.y < mouse.y) this.y -= 1;
-      else this.y += 1;
-    }
+    // Reposicionar partículas ao sair da tela
+    if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+    if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
   }
 
   draw() {
