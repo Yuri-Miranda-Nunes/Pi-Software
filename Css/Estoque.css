@@ -25,6 +25,12 @@
     left: 50px;
     width: 250px; /* Ajuste o tamanho da logo conforme necessário */
     height: auto;
+    
+  }
+  .logo :hover {
+    transform: scale(1.05); /* Aumenta a logo ao passar o mouse */
+    transition: transform
+    
   }
 
   header h1 {
