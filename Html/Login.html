@@ -1,43 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-
-  <link rel="stylesheet" href="/Css/Login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login - Euroquadros</title>
+    <link rel="stylesheet" href="/Css/Login.css">
 </head>
-
 <body>
-  <canvas id="particles"></canvas>
-
-  <div class="ring">
-    <i style="--clr:#D4AF37;"></i>
-    <i style="--clr:#D4AF37;"></i>
-    <i style="--clr:#D4AF37;"></i>
-    <div class="login">
-      <img src="/img/LogoEuroquadros.png" alt="" width="400" height="100">
-      <h2>Login</h2>
-      <div class="inputBx">
-        <input type="text" placeholder="E-mail">
-      </div>
-      <div class="inputBx">
-        <input type="password" placeholder="Senha">
-      </div>
-      <div>
-        <button class="glow-on-hover" type="button"><a href="Index.html" style="color: white; text-decoration: solid ">Entrar</a></button>
-      </div>
-      <div class="links">
-        <a href="#">Esqueci minha senha</a>
-        <a href="CadastroLogin.html" style="color: #D4AF37;">Cadastre-se</a>
-      </div> 
+    <div class="login-container">
+        <div class="logo"><span>Euro</span>quadros</div>
+        <form action="#" method="POST">
+            <input type="password" class="input-field" placeholder="Matricula" required>
+            <button type="submit" class="login-button">Entrar</button>
+        </form>
+        <a href="#" class="forgot-password">Esqueceu sua senha?</a>
     </div>
-  </div>
-  <script src="/js/particles.js"></script>
-
-
-
 </body>
-
 </html>
