@@ -1,6 +1,6 @@
 :root {
     --primeira: #FFCA3A;
-    --segunda: #f5f5f5;
+    --segunda: #333333;
     --text-color: #2D2D34;
     --background-color: #EAE8FF;
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,4 +11,9 @@ body {
     font-family: var(--font-family);
     color: var(--text-color);
     background-color: var(--background-color);
+}
+nav, aside {
+    background-color: var(--segunda);
+    color: var(--text-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
