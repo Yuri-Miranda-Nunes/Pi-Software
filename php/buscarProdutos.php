@@ -1,5 +1,5 @@
 <?php
-include '../conexao.php'; // ou o caminho correto do seu arquivo de conexão
+include 'php/conexao.php'; // ou o caminho correto do seu arquivo de conexão
 
 $sql = "SELECT * FROM produtos"; // substitua pelo nome real da tabela
 $result = $conn->query($sql);

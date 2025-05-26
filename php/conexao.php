@@ -1,8 +1,8 @@
 <?php
-$servidor = "localhost";
+$servidor = "127.0.0.1";
 $usuario = "root";
 $senha = "";
-$banco = "controle_estoque";
+$banco = "estoque";
 
 $conexao = new mysqli($servidor, $usuario, $senha, $banco);
 
