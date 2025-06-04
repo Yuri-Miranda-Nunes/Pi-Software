@@ -9,7 +9,7 @@ body {
 }
 
 .login-container {
-  background-color: #f9f9f9;
+  background-color: #f3eded;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -67,11 +67,12 @@ body {
 .forgot-password {
   margin-top: 15px;
   font-size: 14px;
-  color: #ffcc00; /* Cor amarela da logo */
+  color: #333; 
   text-decoration: none;
   transition: text-decoration 0.3s ease;
 }
 
 .forgot-password:hover {
   text-decoration: underline;
+  color: #ffcc00; /* Cor amarela da logo */ 
 }
