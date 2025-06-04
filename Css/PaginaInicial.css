@@ -1,8 +1,8 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   }
   
   /* Corpo geral */
@@ -125,12 +125,7 @@
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
   }
 
-  ./* Reset básico */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+ 
 
 /* Corpo geral */
 body {
