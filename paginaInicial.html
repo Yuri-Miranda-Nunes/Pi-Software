@@ -8,102 +8,74 @@
   <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="Css/style.css">
 </head>
-<body>
-<nav class="fixed top-0 z-50 w-full border-b border-gray-200 dark:border-gray-700">
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+
+<!-- Navbar -->
+<nav class="fixed top-0 z-50 w-full border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm">
   <div class="px-3 py-3 lg:px-5 lg:pl-3">
     <div class="flex items-center justify-between">
       <div class="flex items-center justify-start rtl:justify-end">
         <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
-          </svg>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path></svg>
         </button>
         <a href="paginaInicial.html" class="flex ms-2 md:me-24">
           <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"><span style="color: #e8b54c">Euro</span><span style="color: #716246">Quadros</span></span>
         </a>
       </div>
-      <div class="flex items-center">
-        <div class="flex items-center ms-3">
-          <div>
-            <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
-              <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
-            </button>
-          </div>
-          <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-sm shadow-sm dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
-            <div class="px-4 py-3">
-              <p class="text-sm text-gray-900 dark:text-white">Neil Sims</p>
-              <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300">neil.sims@flowbite.com</p>
-            </div>
-            <ul class="py-1">
-              <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600">Dashboard</a></li>
-              <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600">Settings</a></li>
-              <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600">Earnings</a></li>
-              <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600">Sign out</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </nav>
 
-<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+<!-- Sidebar -->
+<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full border-gray-200 sm:translate-x-0 dark:border-gray-700" aria-label="Sidebar">
   <div class="h-full px-3 pb-4 overflow-y-auto">
     <ul class="space-y-2 font-medium">
-      <li><a href="paginaInicial.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"><span class="ms-3">Inicial</span></a></li>
-      <li><a href="Estoque.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"><span class="flex-1 ms-3 whitespace-nowrap">Estoque</span></a></li>
-      <li><a href="Funcionarios.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"><span class="flex-1 ms-3 whitespace-nowrap">Funcionarios</span></a></li>
+      <li>
+        <a href="paginaInicial.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+          <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 22 21"><path d="M16.975 11H10V4.025a1 1 0 00-1.066-.998 8.5 8.5 0 109.039 9.039.999.999 0 00-1-1.066h.002Z"/><path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0011 1.02V10h8.975a1 1 0 001-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0012.5 0Z"/></svg>
+          <span class="ms-3">Inicial</span>
+        </a>
+      </li>
+      <li>
+        <a href="Estoque.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+          <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 18 20"><path d="M17 5.923A1 1 0 0016 5h-3V4a4 4 0 10-8 0v1H2a1 1 0 00-1 .923L.086 17.846A2 2 0 002.08 20h13.84a2 2 0 001.994-2.153L17 5.923ZM7 9a1 1 0 01-2 0V7h2v2Zm0-5a2 2 0 114 0v1H7V4Zm6 5a1 1 0 11-2 0V7h2v2Z"/></svg>
+          <span class="flex-1 ms-3 whitespace-nowrap">Estoque</span>
+        </a>
+      </li>
+      <li>
+        <a href="Funcionarios.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+          <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 18"><path d="M14 2a3.963 3.963 0 00-1.4.267 6.439 6.439 0 01-1.331 6.638A4 4 0 1014 2Zm1 9h-1.264A6.957 6.957 0 0115 15v2a2.97 2.97 0 01-.184 1H19a1 1 0 001-1v-1a5.006 5.006 0 00-5-5ZM6.5 9a4.5 4.5 0 100-9 4.5 4.5 0 000 9ZM8 10H5a5.006 5.006 0 00-5 5v2a1 1 0 001 1h11a1 1 0 001-1v-2a5.006 5.006 0 00-5-5Z"/></svg>
+          <span class="flex-1 ms-3 whitespace-nowrap">Funcionários</span>
+        </a>
+      </li>
     </ul>
   </div>
 </aside>
 
-<div class="p-4 sm:ml-64">
-  <div class="mt-16 bg-white dark:bg-gray-800 rounded-xl shadow-md p-8 space-y-6">
-    <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Sobre a Euroquadros</h1>
-    <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-      A <strong class="text-[#e8b54c]">Euroquadros</strong> é reconhecida como a maior indústria de espelhos emoldurados e quadros decorativos da América Latina. Sua principal unidade industrial está localizada em Roseira, São Paulo, onde desempenha um papel fundamental na produção e distribuição de seus produtos.
-    </p>
-    <section>
-      <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Produtos e Atuação</h2>
-      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-        <li>Espelhos emoldurados</li>
-        <li>Quadros decorativos</li>
-        <li>Porta-retratos</li>
-        <li>Telas emolduradas e não emolduradas</li>
-        <li>Bandejas decorativas</li>
-        <li>Ambientações para espelhos e quadros</li>
-      </ul>
-      <p class="mt-2 text-gray-700 dark:text-gray-300">
-        As molduras são feitas em MDF de alta densidade, com acabamentos que seguem as tendências do mercado moveleiro, embaladas cuidadosamente com filme de PVC termo encolhível, cantoneiras protetoras e penduradores.
-      </p>
-    </section>
-    <section>
-      <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Unidade de Roseira</h2>
-      <p class="text-gray-700 dark:text-gray-300">
-        Inaugurada em 16 de março de 2001, a unidade de Roseira é a principal planta industrial da Euroquadros. Conta com uma área de 6.000 m², projetada para ampliar a produção, otimizar recursos e melhorar o ambiente de trabalho.
-      </p>
-      <p class="mt-2 text-gray-700 dark:text-gray-300"><strong>Endereço:</strong> Rodovia Presidente Washington Luís, km 166, Roseira/SP, CEP 12580-000</p>
-      <p class="text-gray-700 dark:text-gray-300"><strong>Telefone:</strong> (12) 3646-9400</p>
-    </section>
-    <section>
-      <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Valores e Compromissos</h2>
-      <p class="text-gray-700 dark:text-gray-300">
-        A empresa valoriza a integridade, segurança e participação no ambiente de trabalho. Incentiva a inovação e busca constante pela excelência em seus produtos e serviços.
-      </p>
-    </section>
-    <section>
-      <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Reconhecimento</h2>
-      <p class="text-gray-700 dark:text-gray-300">
-        Com uma nota média de <strong>8.9/10</strong> no Reclame Aqui nos últimos 12 meses, a Euroquadros é avaliada como <strong class="text-green-600">"ÓTIMO"</strong> pelos consumidores.
-      </p>
-    </section>
-    <div class="mt-6">
-      <a href="https://grupoeuroquadros.com.br/" target="_blank" class="inline-block bg-[#e8b54c] hover:bg-[#c79a3f] text-white font-semibold py-2 px-4 rounded-lg transition">
-        Visite o site oficial
-      </a>
+<!-- Main Content -->
+<main class="p-4 sm:ml-64">
+  <section class="p-8 border-2 border-gray-200 rounded-3xl dark:border-gray-700 mt-14 bg-white dark:bg-gray-800 shadow-lg">
+    <h1 class="text-3xl font-bold mb-8 text-center text-yellow-600">Sobre a EuroQuadros</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-yellow-50 dark:bg-yellow-900 p-6 rounded-xl shadow-inner border border-yellow-200 dark:border-yellow-700">
+        <p>A Euroquadros é a maior indústria de espelhos emoldurados e quadros decorativos da América Latina. Fundada em Roseira-SP, sua unidade principal tem mais de 6.000 m² e é referência na produção e distribuição no setor.</p>
+      </div>
+      <div class="bg-yellow-50 dark:bg-yellow-900 p-6 rounded-xl shadow-inner border border-yellow-200 dark:border-yellow-700">
+        <p>Oferecemos espelhos, quadros, porta-retratos, bandejas e telas decorativas com molduras de MDF de alta densidade, seguindo tendências do mercado moveleiro e com embalagens reforçadas para segurança.</p>
+      </div>
+      <div class="bg-yellow-50 dark:bg-yellow-900 p-6 rounded-xl shadow-inner border border-yellow-200 dark:border-yellow-700">
+        <p>Valorizamos a integridade, segurança, inovação e melhoria contínua. Nossa missão é garantir produtos duráveis, elegantes e que elevem a experiência visual dos espaços.</p>
+      </div>
+      <div class="bg-yellow-50 dark:bg-yellow-900 p-6 rounded-xl shadow-inner border border-yellow-200 dark:border-yellow-700">
+        <p>Reconhecida com avaliação média de 8.9/10 no Reclame Aqui, a Euroquadros se destaca pela excelência no atendimento e na qualidade. Saiba mais em <a href="https://grupoeuroquadros.com.br/" class="underline text-yellow-700 dark:text-yellow-300">grupoeuroquadros.com.br</a>.</p>
+      </div>
+      <div class="bg-yellow-50 dark:bg-yellow-900 p-6 rounded-xl shadow-inner border border-yellow-200 dark:border-yellow-700 md:col-span-2">
+        <p><strong>Contato:</strong> Rodovia Presidente Washington Luís, km 166, Roseira/SP - CEP 12580-000 | Tel: (12) 3646-9400</p>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
+</main>
+
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 </html>
