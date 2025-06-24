@@ -1,12 +1,14 @@
+
 <?php
-$servidor = "127.0.0.1";
-$usuario = "root";
-$senha = "";
-$banco = "estoque";
+$host = 'localhost';
+$db = 'meu_sistema';
+$user = 'root';
+$pass = ''; // use sua senha aqui
 
-$conexao = new mysqli($servidor, $usuario, $senha, $banco);
-
-if ($conexao->connect_error) {
-    die("Falha na conexão: " . $conexao->connect_error);
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erro na conexão: " . $e->getMessage());
 }
 ?>
