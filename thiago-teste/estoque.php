@@ -1,0 +1,116 @@
+<?php
+session_start(); // Ensure session_start() is called at the very beginning before any output
+
+require_once __DIR__ . '/../conexao.php'; // Adjusted path to locate conexao.php
+require_once 'classe_estoque.php'; 
+
+$database = new BancoDeDados(); // Instância da classe BancoDeDados
+$db = $database->obterConexao(); // Obtém a conexão com o banco de dados
+if (!$db) {
+    die('Erro ao conectar ao banco de dados.');
+}
+
+$estoque = new estoque($db); // Properly instantiate the estoque class with the database connection
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = $_POST['nome'];
+    $codigo = $_POST['codigo'];
+    $quantidade = $_POST['quantidade'];
+    $preco = $_POST['preco'];
+
+    $estoque->cadastrarProduto($nome, $codigo, $quantidade, $preco);
+}
+$produtos = $estoque->listarProdutos();
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estoque</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Css/style.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+<nav class="fixed top-0 z-50 w-full border-b border-gray-200 dark:border-gray-700">
+  <div class="px-3 py-3 lg:px-5 lg:pl-3">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center justify-start rtl:justify-end">
+        <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+          <span class="sr-only">Open sidebar</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+            <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"/>
+          </svg>
+        </button>
+        <a href="paginaInicial.html" class="flex ms-2 md:me-24">
+          <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"><span style="color: #e8b54c">Euro</span><span style="color: #716246">Quadros</span></span>
+        </a>
+      </div>
+      <div class="flex items-center">
+        <div class="flex items-center ms-3">
+          <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
+            <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
+          </button>
+          <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-sm shadow-sm dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
+            <div class="px-4 py-3">
+              <p class="text-sm text-gray-900 dark:text-white"><?= $_SESSION['nome'] ?></p>
+              <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"><?= $_SESSION['usuario'] ?></p>
+            </div>
+            <ul class="py-1">
+              <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-300">Dashboard</a></li>
+              <li><a href="logout.php" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-red-400">Sair</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+  <div class="h-full px-3 pb-4 overflow-y-auto">
+    <ul class="space-y-2 font-medium">
+      <li><a href="paginaInicial.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"><span class="ms-3">Inicial</span></a></li>
+      <li><a href="estoque.php" class="flex items-center p-2 text-gray-900 bg-gray-100 rounded-lg dark:bg-gray-700 dark:text-white"><span class="flex-1 ms-3 whitespace-nowrap">Estoque</span></a></li>
+      <li><a href="funcionarios.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"><span class="flex-1 ms-3 whitespace-nowrap">Funcionários</span></a></li>
+    </ul>
+  </div>
+</aside>
+
+<div class="p-4 sm:ml-64">
+  <div class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-14">
+    <h1 class="text-2xl font-bold mb-4">Estoque de Produtos</h1>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+            <th class="px-6 py-3">ID</th>
+            <th class="px-6 py-3">Nome</th>
+            <th class="px-6 py-3">Código</th>
+            <th class="px-6 py-3">Quantidade</th>
+            <th class="px-6 py-3">Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($produtos as $produto): ?>
+          <tr>
+            <td class="px-6 py-4"><?= $produto['id'] ?></td>
+            <td class="px-6 py-4"><?= $produto['nome'] ?></td>
+            <td class="px-6 py-4"><?= $produto['codigo'] ?></td>
+            <td class="px-6 py-4"><?= $produto['quantidade'] ?></td>
+            <td class="px-6 py-4"><?= $produto['preco'] ?></td>
+          </tr>
+        <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+</html>
+
+
